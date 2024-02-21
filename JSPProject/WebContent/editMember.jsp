@@ -36,6 +36,13 @@
 		function deleteBtn(){
 			alert("삭제되었습니다.");
 		}
+		
+		function submit1(){
+			
+			document.form1.submit();
+			
+		}
+		
 	</script>
 
 <style>
@@ -67,6 +74,7 @@
 
 </style>
 
+
 <title>회원 관리</title>
 </head>
 <body>
@@ -89,17 +97,20 @@
     
     	<div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
     	
+    	
+<!--     	검색 창 구현!! -->
 	    	<div class = "search">
 	    	
-	    		<form class="search-box" action="dd.jsp" method="post">
-	    			<input type = "text" id = "search" name = "search" placeholder="이름으로 검색하기">
-	    			
-	    			<button>
-	    				<img src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
-					</button>
+	    		<form name="form1" class="search-box" action="searchUser.jsp" method="post">
+	    			<input type = "text" id = "name" name = "name" placeholder="이름으로 검색하기">
+	    				    			
+	    			<img src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" onclick="submit1()">
+					
 	    		</form>
 	    	</div>
-    	
+<!--     	검색 창 구현!! -->
+
+
 		    <div class="row icon-boxes">
 		    
 		    		<%@ include file = "dbconn.jsp" %>
@@ -109,6 +120,7 @@
 						ResultSet rs = null;
 						String sql = "select * from member";
 						pstmt = conn.prepareStatement(sql);
+						
 						rs = pstmt.executeQuery();
 						
 						while(rs.next()){

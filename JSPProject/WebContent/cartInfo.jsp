@@ -20,27 +20,11 @@
 </head>
 <body>
 
-	<jsp:include page = "top.jsp" />
-	
-	<section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>차량 장바구니</h2>
-         
-        </div>
-
-      </div>
-    </section>
 	
 	<div class = "container">
 		<div class = "row">
 			<table width = "100%">
-				<tr>
-					<td align = "left"><a href = "deleteCart.jsp?cartId=<%=cartId %>" class = "btn btn-danger">삭제하기</a></td>
-					<td align = "right"><a href = "shippingInfo.jsp?cartId=<%=cartId %>" class = "btn btn-success">주문하기</a></td>
-					
-				</tr>
+				
 			</table>
 		</div>
 		
@@ -52,7 +36,6 @@
 					<th>수량</th>
 					<th>소계</th>
 					<th>취등록세 별도</th>
-					<th>비고</th>
 				</tr>
 				
 				<%
@@ -87,7 +70,6 @@
 					<td><%=product.getQuantity() %> 대</td>
 					<td><%=total %> 원</td>
 					<td><%=result_entry %> 원</td>
-					<td><a href="removeCart.jsp?carId=<%=product.getCarId() %>" class = "badge badge-danger">삭제</a></td>
 				</tr>
 				
 				<%
@@ -101,13 +83,10 @@
 					<th></th>
 				</tr>
 			</table>
-			
-			<a href="cars.jsp" class = "btn btn-secondary"> &laquo; 쇼핑 계속하기</a>
 		</div>
 		<hr>
 	</div>
 	
-	<jsp:include page = "footer.jsp" />
 	
 </body>
 </html>

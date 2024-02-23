@@ -6,14 +6,18 @@
 <%@ page import = "dao.ProductRepository" %>
 
 <%
+	//carId를 파라미터값으로 받아옴
 	String id = request.getParameter("carId");
 
+	//id값이 없거으면 cars로 이동
 	if(id == null || id.trim().equals("")){
-		response.sendRedirect("products.jsp");
+		response.sendRedirect("cars.jsp");
 		return;
 	}
 	
+	//productRepository 객체에 dao라는 생성 repository에 인스턴스를 받아옴
 	ProductRepository dao = ProductRepository.getInstance();
+	
 	
 	Product product = dao.getProductById(id);
 	
@@ -60,5 +64,5 @@
 		list.add(goods);
 	}
 	
-	response.sendRedirect("car.jsp?carId=" + id);
+	response.sendRedirect("cars.jsp");
 %>

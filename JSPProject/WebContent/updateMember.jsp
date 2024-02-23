@@ -4,7 +4,7 @@
 
 <html>
 <head>
-<link rel="stylesheet" href="../resources/css/bootstrap.min.css" />
+<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
 <%
 	String sessionId = (String) session.getAttribute("sessionId");
 %>
@@ -106,6 +106,7 @@
 				<div class="col-sm-offset-2 col-sm-10 ">
 					<input type="submit" class="btn btn-primary" value="회원수정 "> 
 					<a href="deleteMember.jsp" class="btn btn-primary">회원탈퇴</a>
+					<input type="reset" class="btn btn-primary " value="취소 " onclick="location.href='main.jsp'" >
 				</div>
 			</div>
 		</form>	
@@ -115,44 +116,17 @@
 	
 	<jsp:include page="footer.jsp" />
 	
+	<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+	<script src="assets/vendor/aos/aos.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+	<script src="assets/vendor/php-email-form/validate.js"></script>
+	
+	 <!-- Template Main JS File -->
+	<script src="assets/js/main.js"></script>
+	
+	
 </body>
 </html>
-<script type="text/javascript">
-	function init() {
-		setComboMailValue("${mail2}");
-		setComboBirthValue("${month}");
-	}
-
-	function setComboMailValue(val) {
-		var selectMail = document.getElementById('mail2');
-		for (i = 0, j = selectMail.length; i < j; i++) {
-			if (selectMail.options[i].value == val) {
-				selectMail.options[i].selected = true; 
-				break;
-			}
-		}
-	}
-	function setComboBirthValue(val) {
-		var selectBirth = document.getElementById('birthmm'); 
-		for (i = 0, j = selectBirth.length; i < j; i++){
-			if (selectBirth.options[i].value == val){
-				selectBirth.options[i].selected = true; 
-				break;
-			}
-		}
-	}
-	function checkForm() {
-		if (!document.newMember.id.value) {
-			alert("아이디를 입력하세요.");
-			return false;
-		}
-		if (!document.newMember.password.value) {
-			alert("비밀번호를 입력하세요.");
-			return false;
-		}
-		if (document.newMember.password.value != document.newMember.password_confirm.value) {
-			alert("비밀번호를 동일하게 입력하세요.");
-			return false;
-		}
-	}
-</script>

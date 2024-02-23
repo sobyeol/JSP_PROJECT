@@ -66,7 +66,7 @@
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
           <div class="icon-box">
             <div class="icon"><i class="ri-stack-line"></i></div>
-            <h4 class="title"><a href="">차량 매물 보기</a></h4>
+            <h4 class="title"><a href="cars.jsp">차량 매물 보기</a></h4>
             <p class="description">현재 등록되어있는 차량의 매물을 확인하실 수 있습니다.</p>
           </div>
         </div>
@@ -109,23 +109,23 @@
 				
 				<c:otherwise>
 				
-					<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
-			          <div class="icon-box">
-			            <div class="icon"><i class="ri-command-line"></i></div>
-			            <h4 class="title"><a href="#">차량 관리</a></h4>
-			            <p class="description">차량 매물을 등록해보세요</p>
-			            <p class="description">관리자만 이용 가능합니다 </p>
-			          </div>
-			        </div>
+<!-- 					<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400"> -->
+<!-- 			          <div class="icon-box"> -->
+<!-- 			            <div class="icon"><i class="ri-command-line"></i></div> -->
+<!-- 			            <h4 class="title"><a href="#">차량 관리</a></h4> -->
+<!-- 			            <p class="description">차량 매물을 등록해보세요</p> -->
+<!-- 			            <p class="description">관리자만 이용 가능합니다 </p> -->
+<!-- 			          </div> -->
+<!-- 			        </div> -->
 			
-			        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="500">
-			          <div class="icon-box">
-			            <div class="icon"><i class="ri-fingerprint-line"></i></div>
-			            <h4 class="title"><a href="#">회원 관리</a></h4>
-			            <p class="description">가입된 회원을 관리해보세요</p>
-			            <p class="description">관리자만 이용 가능합니다 </p>
-			          </div>
-			        </div>
+<!-- 			        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="500"> -->
+<!-- 			          <div class="icon-box"> -->
+<!-- 			            <div class="icon"><i class="ri-fingerprint-line"></i></div> -->
+<!-- 			            <h4 class="title"><a href="#">회원 관리</a></h4> -->
+<!-- 			            <p class="description">가입된 회원을 관리해보세요</p> -->
+<!-- 			            <p class="description">관리자만 이용 가능합니다 </p> -->
+<!-- 			          </div> -->
+<!-- 			        </div> -->
 								
 				</c:otherwise>
 			</c:choose>

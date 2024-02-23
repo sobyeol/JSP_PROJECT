@@ -45,12 +45,10 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="main.jsp">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto o" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+          <li><a class="nav-link scrollto active" href="main.jsp">메인 화면</a></li>
+          <li><a class="nav-link scrollto" href="cars.jsp">차량 매물 보기</a></li>
+          <li><a class="nav-link scrollto" href="#services">자유게시판</a></li>
+          
 
           
           
@@ -61,9 +59,20 @@
 		          <li><a class="getstarted scrollto" href="addMember.jsp">회원가입</a></li>
 	          </c:when>
 	          
+	          <c:when test = "${sessionId eq 'admin'}">
+	          	<li><a class="nav-link scrollto o" href="editCar.jsp">차량 관리</a></li>
+          	  	<li><a class="nav-link scrollto o" href="addCar.jsp">차량 등록</a></li>
+          		<li><a class="nav-link scrollto" href="editMember.jsp">회원 관리</a></li>
+          		<li><a class="nav-link scrollto">[<%=sessionId%>님]</a></li>  
+          	  	<li><a class="getstarted scrollto" href="logoutMember.jsp">로그아웃</a></li>
+          	  	<li><a class="getstarted scrollto" href="updateMember.jsp">회원정보</a></li>
+	          </c:when>
+	          
 	          <c:otherwise>
           	  	
-          	  	<li><a class="nav-link scrollto">[<%=sessionId%>님]</a></li>  
+          	  	<li><a class="nav-link scrollto o" href="cart.jsp">장바구니</a></li>
+          	  	<li><a class="nav-link scrollto">[<%=sessionId%>님]</a></li>
+          	  	
           	  	<li><a class="getstarted scrollto" href="logoutMember.jsp">로그아웃</a></li>
           	  	<li><a class="getstarted scrollto" href="updateMember.jsp">회원정보</a></li>
           	  </c:otherwise>

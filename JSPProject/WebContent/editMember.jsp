@@ -102,10 +102,19 @@
 	    	<div class = "search">
 	    	
 	    		<form name="form1" class="search-box" action="searchUser.jsp" method="post">
-	    			<input type = "text" id = "name" name = "name" placeholder="이름으로 검색하기">
+	    			
+	    			<select name = "category1">
+	    				<option >항목</option>
+	    				<option>id</option>
+	    				<option>name</option>
+	    				<option>phone</option>
+	    				<option>address</option>
+	    			</select>
+	    			<div>
+	    			<input type = "text" name = "category2" placeholder="검색하기">
 	    				    			
-	    			<img src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" onclick="submit1()">
-					
+	    			<img src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" onclick="submit1()" style="cursor:pointer;">
+					</div>
 	    		</form>
 	    	</div>
 <!--     	검색 창 구현!! -->

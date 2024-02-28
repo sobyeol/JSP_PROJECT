@@ -47,7 +47,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="main.jsp">메인 화면</a></li>
           <li><a class="nav-link scrollto" href="cars.jsp">차량 매물 보기</a></li>
-          <li><a class="nav-link scrollto" href="#services">자유게시판</a></li>
+          <li><a class="nav-link scrollto" href="<c:url value="/BoardListAction.do?pageNum=1"/>">자유게시판</a></li>
           
 
           

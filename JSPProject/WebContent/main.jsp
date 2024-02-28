@@ -10,7 +10,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>OnePage Bootstrap Template - Index</title>
+  <title>JSP 프로젝트</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -74,7 +74,7 @@
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
           <div class="icon-box">
             <div class="icon"><i class="ri-palette-line"></i></div>
-            <h4 class="title"><a href="">자유게시판</a></h4>
+            <h4 class="title"><a href="<c:url value="/BoardListAction.do?pageNum=1"/>">자유게시판</a></h4>
             <p class="description">다양한 차량의 후기를 작성하시고 확인해보세요.</p>
           </div>
         </div>

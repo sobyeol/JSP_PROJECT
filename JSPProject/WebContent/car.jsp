@@ -30,7 +30,13 @@
 <!-- Template Main CSS File -->
 <link href="assets/css/style.css" rel="stylesheet">
 
+  <%
+	String sessionId = (String) session.getAttribute("sessionId");
+  %> 
+
 <title>차량 상세 정보</title>
+
+
 
 <script type = "text/javascript">
 
@@ -42,6 +48,22 @@
 		}
 	
 	}
+	
+	function checkLogin() {
+        // 여기서 세션 아이디 확인
+        var sessionId = document.addForm.txtSessionId.value;
+		
+        if (sessionId == "null" || sessionId.trim() === "") {
+            // 세션 아이디가 없으면 로그인 화면으로 이동
+            alert("로그인이 필요합니다.");
+            window.location.href = "loginMember.jsp";
+        } else {
+            // 세션 아이디가 있으면 구매 또는 기타 동작 수행
+            alert("해당 차량이 장바구니에 추가되었습니다.");
+            document.addForm.submit();
+        }
+    }
+	
 
 </script>
 
@@ -118,14 +140,17 @@
 	                <li><strong>주행거리 :</strong><%=rs.getString("c_km") %></li>
 	                <li><strong>옵션 :</strong><%=rs.getString("c_option") %></li>
 	                <li><strong>사고유무 :  </strong><%=rs.getString("c_accident") %></li>
+
 	              </ul>
 	              
-	            
-           		<form name = "addForm" action = "addCart.jsp?carId=<%=rs.getString("c_id") %>" method = "post">
-           			<input type = "submit" class = "btn btn-primary" value = "구매하기" onclick = "addToCart()">
-           			<input type="reset" class="btn btn-primary " value="목록으로 돌아가기 " onclick="location.href='cars.jsp'" >
-           		</form>
-					 
+
+	           		<form name = "addForm" action = "addCart.jsp?carId=<%=rs.getString("c_id") %>" method = "post">
+	           			
+	           			<input type = "hidden" value= "<%=sessionId %>" name = "txtSessionId">
+	           			<input type = "button" class = "btn btn-primary" value = "구매하기" onclick = "checkLogin()">
+	           			<input type="reset" class="btn btn-primary " value="목록으로 돌아가기 " onclick="location.href='cars.jsp'" >
+	           		</form>
+
             </div>
             
             <div class="portfolio-description">

@@ -105,6 +105,9 @@
 
 				</div>
 			</div>
+			
+			<input type="hidden" name="authority" value = "0">
+			
 			<div class="form-group  row">
 				<div class="col-sm-offset-2 col-sm-10 ">
 					<input type="submit" class="btn btn-primary " value="등록 " > 

@@ -11,7 +11,7 @@
 	String name = request.getParameter("name");
 	String phone = request.getParameter("phone");
 	String address = request.getParameter("address");
-
+	String authority = request.getParameter("authority");
 
 %>
 
@@ -22,13 +22,13 @@
 
 
 <sql:update dataSource="${dataSource}" var="resultSet">
-   INSERT INTO member VALUES (?, ?, ?, ?, ?)
+   INSERT INTO member VALUES (?, ?, ?, ?, ?, ?)
    <sql:param value="<%=id%>" />
 	<sql:param value="<%=password%>" />
 	<sql:param value="<%=name%>" />
 	<sql:param value="<%=phone%>" />
 	<sql:param value="<%=address%>" />
-
+	<sql:param value="<%=authority %>" />
 </sql:update>
 
 <c:if test="${resultSet>=1}">
